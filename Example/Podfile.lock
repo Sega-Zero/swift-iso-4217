@@ -1,0 +1,16 @@
+PODS:
+  - iso4217 (0.1.0)
+
+DEPENDENCIES:
+  - iso4217 (from `../`)
+
+EXTERNAL SOURCES:
+  iso4217:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  iso4217: 595e77f8d6e6d7022811bdec33407425236989ee
+
+PODFILE CHECKSUM: b376d9dcd2bf8e61c3dea917599fc0b52ead518c
+
+COCOAPODS: 1.2.0
