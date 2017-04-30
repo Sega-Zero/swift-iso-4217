@@ -11,9 +11,9 @@ import Foundation
 /// Price representation type
 public struct Price {
     /// The amount of money in specified currency
-    let value: Double
+    public let value: Double
     /// The price currency
-    let currency: CurrencyCode
+    public let currency: CurrencyCode
 
     public init(value: Double, currency: CurrencyCode) {
         self.value = value
