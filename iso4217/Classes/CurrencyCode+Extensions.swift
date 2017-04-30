@@ -91,3 +91,9 @@ extension CurrencyCode {
         return formatter.string(from: NSNumber(value: price)) ?? ""
     }
 }
+
+public extension CurrencyCode {
+    public var currencySymbol: String {
+        return self.priceFormatter.currencySymbol ?? ""
+    }
+}
