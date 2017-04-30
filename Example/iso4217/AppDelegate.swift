@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         debugPrint(thirdPrice)
 
         if let price = Price(value: 10.1, isoCode: "EUR") {
-            print(price)
+            print(price, "currency symbol is:", price.currency.currencySymbol)
         } else {
             print("sorry, bad luck")
         }
