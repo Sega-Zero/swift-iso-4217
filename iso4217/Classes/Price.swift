@@ -9,7 +9,7 @@
 import Foundation
 
 /// Price representation type
-public struct Price {
+public struct Price: Equatable, Hashable {
     /// The amount of money in specified currency
     public let value: Double
     /// The price currency

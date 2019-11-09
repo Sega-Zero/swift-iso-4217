@@ -93,7 +93,7 @@ extension CurrencyCode {
 }
 
 public extension CurrencyCode {
-    public var currencySymbol: String {
+    var currencySymbol: String {
         return self.priceFormatter.currencySymbol ?? ""
     }
 }
