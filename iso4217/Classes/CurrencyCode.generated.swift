@@ -133,9 +133,11 @@ public enum CurrencyCode: String {
     case buk = "BUK"
     ///Botswanan Pula
     case bwp = "BWP"
-    ///Belarusian New Ruble (1994–1999)
+    ///Belarusian Ruble (1994–1999)
     case byb = "BYB"
     ///Belarusian Ruble
+    case byn = "BYN"
+    ///Belarusian Ruble (2000–2016)
     case byr = "BYR"
     ///Belize Dollar
     case bzd = "BZD"
@@ -155,6 +157,8 @@ public enum CurrencyCode: String {
     case clf = "CLF"
     ///Chilean Peso
     case clp = "CLP"
+    ///Chinese Yuan (offshore)
+    case cnh = "CNH"
     ///Chinese People’s Bank Dollar
     case cnx = "CNX"
     ///Chinese Yuan
@@ -177,7 +181,7 @@ public enum CurrencyCode: String {
     case cve = "CVE"
     ///Cypriot Pound
     case cyp = "CYP"
-    ///Czech Republic Koruna
+    ///Czech Koruna
     case czk = "CZK"
     ///East German Mark
     case ddm = "DDM"
@@ -268,9 +272,9 @@ public enum CurrencyCode: String {
     case iep = "IEP"
     ///Israeli Pound
     case ilp = "ILP"
-    ///Israeli Sheqel (1980–1985)
+    ///Israeli Shekel (1980–1985)
     case ilr = "ILR"
-    ///Israeli New Sheqel
+    ///Israeli New Shekel
     case ils = "ILS"
     ///Indian Rupee
     case inr = "INR"
@@ -365,8 +369,10 @@ public enum CurrencyCode: String {
     case mnt = "MNT"
     ///Macanese Pataca
     case mop = "MOP"
-    ///Mauritanian Ouguiya
+    ///Mauritanian Ouguiya (1973–2017)
     case mro = "MRO"
+    ///Mauritanian Ouguiya
+    case mru = "MRU"
     ///Maltese Lira
     case mtl = "MTL"
     ///Maltese Pound
@@ -415,13 +421,13 @@ public enum CurrencyCode: String {
     case pab = "PAB"
     ///Peruvian Inti
     case pei = "PEI"
-    ///Peruvian Nuevo Sol
+    ///Peruvian Sol
     case pen = "PEN"
     ///Peruvian Sol (1863–1965)
     case pes = "PES"
     ///Papua New Guinean Kina
     case pgk = "PGK"
-    ///Philippine Peso
+    ///Philippine Piso
     case php = "PHP"
     ///Pakistani Rupee
     case pkr = "PKR"
@@ -481,8 +487,10 @@ public enum CurrencyCode: String {
     case srg = "SRG"
     ///South Sudanese Pound
     case ssp = "SSP"
-    ///São Tomé & Príncipe Dobra
+    ///São Tomé & Príncipe Dobra (1977–2017)
     case std = "STD"
+    ///São Tomé & Príncipe Dobra
+    case stn = "STN"
     ///Soviet Rouble
     case sur = "SUR"
     ///Salvadoran Colón
@@ -541,7 +549,7 @@ public enum CurrencyCode: String {
     case uzs = "UZS"
     ///Venezuelan Bolívar (1871–2008)
     case veb = "VEB"
-    ///Venezuelan Bolívar
+    ///Venezuelan Bolívar (2008–2018)
     case vef = "VEF"
     ///Vietnamese Dong
     case vnd = "VND"
@@ -617,10 +625,10 @@ public enum CurrencyCode: String {
     case zrn = "ZRN"
     ///Zairean Zaire (1971–1993)
     case zrz = "ZRZ"
+    ///Zimbabwean Dollar (1980–2008)
+    case zwd = "ZWD"
     ///Zimbabwean Dollar (2009)
     case zwl = "ZWL"
     ///Zimbabwean Dollar (2008)
     case zwr = "ZWR"
-    ///Zimbabwean Dollar (1980–2008)
-    case zwd = "ZWD"
 }
