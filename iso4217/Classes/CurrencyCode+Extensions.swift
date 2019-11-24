@@ -24,14 +24,12 @@ private extension CurrencyCode {
     }
 
     var locale: Locale {
-        for localeId in Locale.availableIdentifiers {
-            let locale = Locale(identifier: localeId)
-            if let code = locale.currencyCode, code == self.rawValue {
-                return locale
-            }
+        let appropriateLocales: [Locale] = Locale.availableIdentifiers.compactMap {
+            let locale = Locale(identifier: $0)
+            guard let code = locale.currencyCode, code == self.rawValue else { return nil }
+            return locale
         }
-
-        return self.canonicalLocale
+        return appropriateLocales.first(where: { $0.currencySymbol != $0.currencyCode }) ?? appropriateLocales.first ?? self.canonicalLocale
     }
 
     var priceLocale: Locale {
