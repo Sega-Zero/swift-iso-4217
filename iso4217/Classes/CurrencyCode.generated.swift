@@ -11,7 +11,7 @@
 /// Use this snippet to update enum whenever you want:
 /** ```swift
 let locale = NSLocale(localeIdentifier: "en_US")
-var s = "public enum CurrencyCode: String {"
+var s = "public enum CurrencyCode: String, CaseIterable {"
 NSLocale.isoCurrencyCodes.forEach {
     if #available(iOS 10.0, macOS 10.12, *) {
         if let description = locale.localizedString(forCurrencyCode: $0) {
