@@ -26,7 +26,7 @@ print(s + "\n}")
 ```
 */
 
-public enum CurrencyCode: String {
+public enum CurrencyCode: String, CaseIterable {
     ///Andorran Peseta
     case adp = "ADP"
     ///United Arab Emirates Dirham
