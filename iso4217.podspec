@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'iso4217'
-s.version          = '0.1.2'
+s.version          = '0.1.3'
 s.summary          = 'Small swift library to work with currencies in ISO-4217 format.'
 
 s.homepage         = 'https://github.com/Sega-Zero/swift-iso-4217'
