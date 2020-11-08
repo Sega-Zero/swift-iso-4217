@@ -24,11 +24,24 @@ private extension CurrencyCode {
     }
 
     var locale: Locale {
+        // try to find the mosta appropriate locale for currency, this solves the issue when USD may be resolved to Equador.
+        // Here we're trying to search through user's preferred locales first. In 99% of cases this will locate more appropriate locale for user.
+        let preferredLocales: [Locale] = Locale.preferredLanguages.compactMap {
+            let locale = Locale(identifier: $0.replacingOccurrences(of: "-", with: "_"))
+            guard let code = locale.currencyCode, code == self.rawValue else { return nil }
+            return locale
+        }
+
+        if let locale = preferredLocales.first(where: { $0.currencySymbol != $0.currencyCode }) {
+            return locale
+        }
+
         let appropriateLocales: [Locale] = Locale.availableIdentifiers.compactMap {
             let locale = Locale(identifier: $0)
             guard let code = locale.currencyCode, code == self.rawValue else { return nil }
             return locale
         }
+
         return appropriateLocales.first(where: { $0.currencySymbol != $0.currencyCode }) ?? appropriateLocales.first ?? self.canonicalLocale
     }
 
