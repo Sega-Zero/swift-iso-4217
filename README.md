@@ -49,12 +49,31 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### CocoaPods
+
 iso4217 is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "iso4217"
 ```
+
+CocoaPods builds compile the checked-in pregenerated `CurrencyCode` enum.
+
+### Swift Package Manager
+
+Add the package to your project (File → Add Package Dependencies →
+`https://github.com/Sega-Zero/swift-iso-4217`) or to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/Sega-Zero/swift-iso-4217.git", from: "0.2.0")
+```
+
+Requires Xcode 15 or newer (Swift macros). The public API is identical to the
+CocoaPods one (`import iso4217`, `Price`, `CurrencyCode`), but `CurrencyCode`
+is generated **at build time** by a Swift macro from your toolchain's
+Foundation — the currency list always matches your current Xcode/OS, no manual
+regeneration needed. Requires trusting the macro when Xcode asks on first use.
 
 ## License
 

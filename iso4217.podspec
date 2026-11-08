@@ -12,5 +12,9 @@ s.social_media_url = 'https://twitter.com/SegaZero'
 s.ios.deployment_target = '8.0'
 
 s.source_files = 'iso4217/Classes/**/*'
+# SPM-only: `CurrencyCode` is generated there at build time by a Swift macro
+# (macro plugin targets can't be built by CocoaPods, so the pod uses the
+# checked-in CurrencyCode.generated.swift).
+s.exclude_files = 'iso4217/Classes/CurrencyCode.macro.swift'
 s.swift_version = '5.1'
 end
